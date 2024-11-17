@@ -14,9 +14,9 @@ class CONFIG:
     title = 'Contratos'
     width = 800
     height = 600
-    resizable = False
+    resizable = True
     frameless = True
-    min_size = 800, 600
+    min_size = 1200, 800
     debug = True
     watch = True
     templates_dir = TEMPLATES_DIR

@@ -1,5 +1,33 @@
 {% extends "base.html" %} {% block content %} {% include "contextmenu.html" %}
 <div class="flex flex-col items-center gap-5 p-5 w-full h-full text-slate-700">
-    <div class="flex justify-center items-center w-full h-full font-bold">Boilerplate App</div>
+    <!-- File Picker -->
+    <div
+        class="flex justify-between items-center border-2 bg-background-100 p-5 border-background-200 rounded-lg w-full h-fit"
+    >
+        <div class="flex justify-between items-center gap-3 w-full">
+            <p
+                id="file-display"
+                class="font-semibold text-background-400 text-ellipsis text-nowrap overflow-hidden"
+            >
+                nenhum arquivo foi selecionado ainda. {{ resizable }}
+            </p>
+            <button
+                id="file-btn"
+                class="bg-primary px-6 py-5 rounded-md font-bold text-md text-nowrap text-sm text-white transition-all duration-200 active:scale-95"
+                onclick="select_file()"
+            >
+                SELECIONAR ARQUIVO
+            </button>
+        </div>
+    </div>
+
+    <!-- Generate Button -->
+    <button
+        id="submit-btn"
+        class="bg-primary px-6 py-5 rounded-md w-full font-bold text-md text-nowrap text-sm text-white transition-all duration-200 active:scale-95"
+    >
+        SUBMIT
+    </button>
 </div>
+
 {% endblock content %}
