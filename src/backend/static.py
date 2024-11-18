@@ -66,7 +66,7 @@ class StaticServer:
             if time.time() > end_time:
                 self._show_error_and_exit()
 
-            time.sleep(0.01)
+            time.sleep(0.1)
 
     def _show_error_and_exit(self):
         try:

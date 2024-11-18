@@ -1,6 +1,7 @@
 import webview
 
 from src.backend.api import API
+from src.backend.api.swal import SwalAPI
 from src.backend.static import StaticServer
 from src.backend.utils import is_frozen, setup_cleanup_functions
 from src.backend.watcher import Watcher
@@ -36,7 +37,6 @@ def initialize():
         )
 
         window = create_window(api)
-
         static_server.start()
         api.start(window)
 
@@ -52,6 +52,8 @@ def initialize():
         import traceback
 
         traceback.print_exc()
+        if window:
+            SwalAPI()
 
 
 if __name__ == '__main__':
