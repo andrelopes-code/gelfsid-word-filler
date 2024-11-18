@@ -116,7 +116,6 @@ __pypackages__/
 .ruff_cache
 __pycache__
 
-
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid

@@ -14,7 +14,7 @@ class TemplateFiller(BaseAPI):
         super().__init__(window)
         self.swal: SwalAPI = swal
         self.placeholder_regex = r'%\{(.+?)\}%'
-        self.output_file = 'output.docx'
+        self.output_file = 'output/output.docx'
 
     def _open_file(self, file_path):
         try:
@@ -36,7 +36,7 @@ class TemplateFiller(BaseAPI):
             )
         ]
 
-        return placeholders
+        return list(set(placeholders))
 
     def fill(self, file_path, data):
         # Check if all values are not empty
